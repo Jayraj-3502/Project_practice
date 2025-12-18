@@ -1,11 +1,18 @@
 import { Container, Title, Button, Autocomplete } from "@mantine/core";
-import Input from "./components/form/Input";
+import Buttons from "./components/Buttons";
+import SliderDemo from "./components/SliderDemo";
 import Navigation from "./components/Navigation";
+import Layouts from "./components/Layouts";
+import DataDisplay from "./components/DataDisplay";
 
 function App() {
   return (
     <Container>
-      <Navigation />
+      {/* <Buttons /> */}
+      {/* <SliderDemo /> */}
+      {/* <Navigation /> */}
+      {/* <Layouts /> */}
+      <DataDisplay />
     </Container>
   );
 }
