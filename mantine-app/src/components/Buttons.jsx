@@ -8,14 +8,14 @@ import {
   Slider,
   Text,
 } from "@mantine/core";
-import { useStyles } from "../Constant";
+// import { useStyles } from "../Constant";
 import React, { useState } from "react";
 
 function Buttons() {
   const [active, setActive] = useState(0);
   const [copyValue, setCopyValue] = useState("");
   const [fileValue, setFileValue] = useState(null);
-  const { classes, cx } = useStyles();
+  // const { classes, cx } = useStyles();
   return (
     <>
       {/* <Button

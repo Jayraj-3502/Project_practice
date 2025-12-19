@@ -4,6 +4,7 @@ import SliderDemo from "./components/SliderDemo";
 import Navigation from "./components/Navigation";
 import Layouts from "./components/Layouts";
 import DataDisplay from "./components/DataDisplay";
+import { Counter } from "./hooks/StateManagement";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       {/* <Navigation /> */}
       {/* <Layouts /> */}
       <DataDisplay />
+      {/* <Counter /> */}
     </Container>
   );
 }
