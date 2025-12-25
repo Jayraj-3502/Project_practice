@@ -1,3 +1,4 @@
+import { curveCardinal } from "d3-shape";
 import {
   Area,
   AreaChart,
@@ -53,6 +54,7 @@ export function SimpleAreaChart() {
     },
   ];
 
+  const cardinal = curveCardinal.tension(0.2);
   return (
     <AreaChart
       data={data}
@@ -69,21 +71,21 @@ export function SimpleAreaChart() {
       <Tooltip />
       <Area
         dataKey={"uv"}
-        type={"monotone"}
+        type={cardinal}
         stackId={1}
         stroke="orange"
         fill="orange"
       />
       <Area
         dataKey={"pv"}
-        type={"monotone"}
+        type={cardinal}
         stackId={1}
         fill="yellow"
         stroke="yellow"
       />
       <Area
         dataKey={"amt"}
-        type={"monotone"}
+        type={cardinal}
         stackId={1}
         stroke="red"
         fill="red"

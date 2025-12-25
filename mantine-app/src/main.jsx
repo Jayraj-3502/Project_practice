@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { Grid, MantineProvider } from "@mantine/core";
-import GloblaComponent from "./components/GloblaComponent.jsx";
+import GloblaComponent from "../../mantine_ui_latest/src/components/GloblaComponent.jsx";
 // import { Notifications } from "@mantine/notifications";
 // import "@mantine/core/styles.css";
 // import "@mantine/notifications/styles.css";

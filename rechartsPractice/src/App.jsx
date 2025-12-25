@@ -14,6 +14,10 @@ import {
   SimpleLineChart,
   TinyLineChart,
 } from "./charts/Linechart/LineChartPractice";
+import {
+  BarChartWithMultiXAxis,
+  SimpleBarChart,
+} from "./charts/Barchart/BarChartPractice";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -58,9 +62,11 @@ function App() {
   return (
     <>
       <h1>This is chart</h1>
-      <SimpleLineChart />
-      <TinyLineChart />
-      {/* <SimpleAreaChart /> */}
+      {/* <SimpleLineChart /> */}
+      {/* <TinyLineChart /> */}
+      {/* <SimpleBarChart />
+      <SimpleAreaChart /> */}
+      <BarChartWithMultiXAxis />
     </>
   );
 }
