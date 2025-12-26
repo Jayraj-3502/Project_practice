@@ -198,7 +198,25 @@ function renderQuarterTick(tickData) {
   const quarterNumber = Math.floor(month % 3) + 1;
 
   if (month % 3 === 1) {
+    return (
+      <text
+        x={x + width / visibleTicksCount / 2 - offset}
+        y={y}
+        textAnchor="middle"
+      >{`Q${quarterNumber}`}</text>
+    );
   }
+
+  const isLast = month === 11;
+
+  if (month % 3 === 0 || isLast) {
+    const pathX =
+      Math.floor(isLast ? x - offset + width / visibleTicksCount : x - offset) +
+      0.5;
+
+    return <path d={`M${pathX},${y - 4}v${-35}`} stroke="red" />;
+  }
+  return null;
 }
 
 // const renderQuarterTick = (tickProps) => {
@@ -218,16 +236,16 @@ function renderQuarterTick(tickData) {
 //     );
 //   }
 
-//   const isLast = month === 11;
+// const isLast = month === 11;
 
-//   if (month % 3 === 0 || isLast) {
-//     const pathX =
-//       Math.floor(isLast ? x - offset + width / visibleTicksCount : x - offset) +
-//       0.5;
+// if (month % 3 === 0 || isLast) {
+//   const pathX =
+//     Math.floor(isLast ? x - offset + width / visibleTicksCount : x - offset) +
+//     0.5;
 
-//     return <path d={`M${pathX},${y - 4}v${-35}`} stroke="red" />;
-//   }
-//   return null;
+//   return <path d={`M${pathX},${y - 4}v${-35}`} stroke="red" />;
+// }
+// return null;
 // };
 
 export const BarChartWithMultiXAxis = () => {
